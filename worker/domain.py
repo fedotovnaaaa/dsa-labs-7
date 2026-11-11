@@ -2,7 +2,6 @@ from decimal import Decimal
 
 
 def calculate(kind, amount, points, balance, purchase=None, already_returned=False):
-    """Бизнес-правила: без брокера и базы данных."""
     if kind == "purchase":
         if purchase is not None:
             return 0, "rejected", "duplicate_purchase"
